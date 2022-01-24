@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(133, 132, 219, 0.7);
+  left: 0;
+  right: 0;
+  z-index: 200;
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.header:hover {
+  opacity: 0.8;
+  background-color: #7fffd4;
+}
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav__item {
+  color: white;
+  text-decoration: none;
+}
+.section {
+  height: 100vh;
+}
+.main {
+  background-image: url(img/фон4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  width: 75%;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+.about__avatar {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  flex-shrink: 0;
+  margin-right: 20px;
+  transition: all 1s cubic-bezier(.15,.57,.13,.98) 0s;
+}
+
+.about__avatar:hover {
+  transform: rotate(180deg);
+}
+.about__img {
+  height: 100%;
+}
+.about__info {
+  background-color: rgba(150, 144, 243, 0.9);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 5px solid white;
+}
+.about__title {
+  font-size: 50px;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  animation: title-run 5s infinite alternate;
+}
+@keyframes title-run {
+0%{
+  transform: translatex(0px);
+}
+50%{
+  color: #6963c2;
+}
+100%{
+  transform: translateX(425px);
+}
+}
+.about__text {
+  font-size: 20px;
+  font-family: "Amatic SC", cursive;
+}
+.button {
+  position: relative;
+  z-index: 10;
+  background-color: rgb(104, 147, 228);
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+  transition: all 1s cubic-bezier(.01,-0.02,.72,.02) 0s;
+}
+.button:hover{
+  box-shadow: 0px 0px 30px 10px #6868db;
+}
+.compliment {
+  background-image: url(img/fon.jpg);
+  background-size: cover;
+  color: white;
+}
+.compliment__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+@keyframes tigr{
+  0%{
+    transform: scale(0); 
+  }
+  100%{
+    transform:scale(1)
+  }
+}
+
+.compliment__img-wrap {
+  height: 60%;
+  position: relative;
+  left: 50%;
+  animation: tigr 5s infinite alternate cubic-bezier(.17,.67,.99,.03) 0s;;
+}
+.compliment__img {
+  height: 100%;
+}
+.compliment__img-talk {
+  position: absolute;
+  top: 30%;
+  left: -5%;
+}
+.poem {
+  background-image: url(img/фоон.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  font-family: "Bad Script", cursive;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes poem-title{
+  0%{
+    transform: skew(0);
+  }
+  100%{
+    transform: skew(1);
+    color: #0000ff;
+  }
+}
+.poem__title {
+  text-align: center;
+  animation: poem-title 1s infinite alternate;
+}
+.poem__item {
+  width: 300px;
+  min-height: 580px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(122, 197, 241);
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  padding: 20px;
+}
+.poem__img-wrap {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+.poem__img{
+    height: 100%;
+}
+.poem__list{
+    display: flex;
+    justify-content: center;
+}
+.msg{
+  background-image: url(img/фон123.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+.msg__title{
+  margin-bottom: 68px;
+}
+.form-msg{
+  width: 600px;
+  background-image: url(img/звезды.jpg);
+  background-position: right top;
+  background-size: cover;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 65px;
+  padding: 40px 40px 65px;
+  position: relative;
+}
+.form-msg__content{
+width: 90%;
+margin: 0 auto;
+}
+.form-msg__row{
+  margin-bottom: 10px;
+}
+/*.fotm-msg__text-input{
+  font-size: 20px;
+  margin-bottom: 10px;
+}*/
+.form-msg__input ,
+.form-msg__message{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 10px 10px;
+  border-radius: 5px;
+  border-style: none;
+  outline: none;
+}
+.form-msg__message {
+  height: 200px;
+  resize: none;
+}
+
+.form-msg__button-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-msg__submit {
+  background-color: #f82137;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-msg__img-wrap {
+  height: 200px;
+  position: absolute;
+  top: -157px;
+  right: 0;
+}
+
+.form-msg__img {
+  height: 100%;
+}
+
+
