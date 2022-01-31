@@ -1,3 +1,3 @@
 # Страница дедовская  <br>
 Толстогузова Арина
-https://github.com/Arina45678910/Santa.git
+https://arina45678910.github.io/Santa/
